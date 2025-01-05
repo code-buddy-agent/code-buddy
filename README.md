@@ -44,7 +44,7 @@ jobs:
     steps:
       - name: CodeBuddy
         id: code_review
-        uses: code-buddy-agent/code-buddy@v0.0.4
+        uses: code-buddy-agent/code-buddy@v1.0.0
         with:
           owner: "${{ github.repository_owner }}"
           repository: code-buddy-agent

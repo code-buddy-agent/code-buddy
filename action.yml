@@ -1,6 +1,9 @@
 # action.yml
 name: 'CodeBuddy AI Code Review'
 description: 'Cut code reviews time, reduce bugs, improve your code quality with the power of LLM agents.'
+branding:
+  icon: 'code'
+  color: 'black'
 inputs:
   owner:
     description: 'Owner of repository'
