@@ -4,7 +4,7 @@ FROM alpine:latest
 RUN	apk add --no-cache \
   bash \
   ca-certificates \
-  curl \
+  curl
 
 COPY entrypoint.sh /entrypoint.sh
 
