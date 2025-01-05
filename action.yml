@@ -1,0 +1,39 @@
+# action.yml
+name: 'CodeBuddy AI Code Review'
+description: 'Cut code reviews time, reduce bugs, improve your code quality with the power of LLM agents.'
+inputs:
+  owner:
+    description: 'Owner of repository'
+    required: true
+  repository:
+    description: 'Name of repository'
+    required: true
+  pull_request_number:
+    description: 'Identifier of pull request'
+    required: true
+  github_token:
+    description: 'Personal Access token to repository'
+    required: true
+  code_buddy_key:
+    description: 'Code Buddy Key to access AI Agent'
+    required: true
+  stack:
+    description: 'Your stack of development'
+    required: true
+  total_comments:
+    description: 'Total of comments by file'
+    required: false
+outputs:
+  response:
+    description: 'Response of AI Agent'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.owner }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.pull_request_number }}
+    - ${{ inputs.github_token }}
+    - ${{ inputs.code_buddy_key }}
+    - ${{ inputs.stack }}
+    - ${{ inputs.total_comments }}

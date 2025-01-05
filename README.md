@@ -1,16 +1,21 @@
-## Hi there 👋
+# Hello world docker action
 
-<!--
-**code-buddy-agent/code-buddy-agent** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
 
-Here are some ideas to get you started:
+## Inputs
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## `who-to-greet`
+
+**Required** The name of the person to greet. Default `"World"`.
+
+## Outputs
+
+## `time`
+
+The time we greeted you.
+
+## Example usage
+
+uses: actions/hello-world-docker-action@v2
+with:
+who-to-greet: 'Mona the Octocat'
